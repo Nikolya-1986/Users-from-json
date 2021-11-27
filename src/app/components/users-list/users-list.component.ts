@@ -21,7 +21,7 @@ export class UsersListComponent implements OnInit, OnDestroy {
 
   public ngOnInit():void {
     this.fetchUsers();
-  }
+  };
 
   private fetchUsers(): UserDTO | any {
     return this.userService.getUsers()
@@ -29,7 +29,7 @@ export class UsersListComponent implements OnInit, OnDestroy {
     .subscribe((res: {}) => {
       this.users = res;
     })
-  }
+  };
 
   public delete(id: string): void {
     if (window.confirm('Really?')){
@@ -37,10 +37,10 @@ export class UsersListComponent implements OnInit, OnDestroy {
         this.fetchUsers()
       })
     }
-  }
+  };
 
   public ngOnDestroy(): void {
     this.destroy$.next();
     this.destroy$.complete();
-  }
+  };
 }
