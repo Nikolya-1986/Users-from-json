@@ -1,1 +1,69 @@
-<p>users-list works!</p>
+<div class="container mt-5">
+
+    <div class="d-flex flex-row-reverse bd-highlight">
+        <button     
+            class="btn btn-primary" 
+            routerLink="/add"
+            >
+            Add Empoyee
+        </button>
+    </div>
+  
+    <h2 class="mb-3 text-center">
+        Users Collection
+    </h2>
+  
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+            <th scope="col">
+                #Id
+            </th>
+            <th scope="col">
+                Name
+            </th>
+            <th scope="col">
+                Email
+            </th>
+            <th scope="col">
+                Phone
+            </th>
+            <th scope="col">
+                Action
+            </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users">
+                <td>
+                    {{user.id}}
+                </td>
+                <td>
+                    {{user.name}}
+                </td>
+                <td>
+                    {{user.email}}
+                </td>
+                <td>
+                    {{user.phone}}
+                </td>
+                <td>
+                    <span 
+                        class="edit btn-danger btn-sm btn" 
+                        (click)="delete(user.id)"
+                        >
+                        Delete
+                    </span> 
+                    &nbsp;
+                    <span 
+                        class="edit btn-success btn-sm btn" 
+                        routerLink="/edit/{{user.id}}"
+                        >
+                        Edit
+                    </span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
+</div>

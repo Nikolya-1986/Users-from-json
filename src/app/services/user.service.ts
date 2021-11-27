@@ -77,3 +77,26 @@ export class UserService {
         return throwError(message);
     }
 }
+
+// {
+//     "users": [
+//       {
+//         "id": 1,
+//         "name": "Amy Ferra Fowler",
+//         "email": "amy@gmail.com",
+//         "phone": "202-555-0163"
+//       },
+//       {
+//         "id": 2,
+//         "name": "Sheldon Cooper",
+//         "email": "sheldon@gmail.com",
+//         "phone": "202-555-0182"
+//       },
+//       {
+//         "id": 3,
+//         "name": "Raj Koothrappaliter",
+//         "email": "raj@gmail.com",
+//         "phone": "202-555-0183"
+//       }
+//     ]
+//   }
