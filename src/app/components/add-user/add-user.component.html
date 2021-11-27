@@ -1,1 +1,40 @@
-<p>add-user works!</p>
+<div class="container" style="max-width: 500px;">
+    <h3 class="mb-3 mt-5 text-center">
+        Add User
+    </h3>
+  
+    <div class="form-group">
+        <input 
+            type="text" 
+            [(ngModel)]="userAdd.name" 
+            class="form-control" 
+            placeholder="Name"
+        >
+    </div>
+  
+    <div class="form-group">
+        <input 
+            type="text" 
+            [(ngModel)]="userAdd.email" 
+            class="form-control" 
+            placeholder="Email"
+            >
+    </div>
+  
+    <div class="form-group">
+        <input 
+            type="text" 
+            [(ngModel)]="userAdd.phone" 
+            class="form-control" 
+            placeholder="Phone"
+            >
+    </div>
+  
+    <div class="form-group">
+        <button 
+            class="btn btn-success btn-lg btn-block" 
+            (click)="addUser(userAdd)">
+            Add User
+        </button>
+    </div>
+</div>
