@@ -9,7 +9,7 @@ import { UserDTO } from '../interfaces/user.interface';
   providedIn: 'root'
 })
 
-export class CrudService {
+export class UserService {
 
     private readonly BASE_URL = 'http://localhost:3000';
 
